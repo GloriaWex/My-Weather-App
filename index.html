@@ -3,33 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klima App</title>
+    <link rel="stylesheet" href="src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Mate&display=swap"
       rel="stylesheet"
     />
-
-    <title>Klima App</title>
   </head>
+<div class="klima-app">
   <body>
-    <div class="klima-app">
       <header>
+        <h1>Weather Status</h1>
         <form>
-          <input type="search" placeholder="Enter a city..." required />
+          <input type="text" placeholder="search for city" />
           <input type="submit" value="Search" />
         </form>
       </header>
       <main>
+        <h2>New York</h2>
+        <span>Monday 19:38</span>
+        <p>⛅32°C</p>
+        <span>Clear</span>
         <div>
-          <h1>Kampala</h1>
-          <p>
-            Tuesday 14:49, scattered clouds
-            <br />
-            Humidity: 66%, Wind: 3.13km/h
-          </p>
+          <p>Humidity 85%</p>
         </div>
-        <div>🌤️ 12°C</div>
+        <div>
+          <p>Wind 5.14km/h</p>
+        </div>
       </main>
       <footer>
         This project was coded by

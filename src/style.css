@@ -1,0 +1,11 @@
+body {
+  font-family: "Mate", serif;
+  background-color: #085a78;
+}
+
+.klima-app {
+  background-color: #72a8ce;
+  border-radius: 10px;
+  max-width: 600px;
+  padding: 30px;
+}
