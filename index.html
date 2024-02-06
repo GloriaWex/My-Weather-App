@@ -16,21 +16,26 @@
   <body>
       <header>
         <h1>Weather Status</h1>
-        <form>
-          <input type="text" placeholder="search for city" />
-          <input type="submit" value="Search" />
+        <form class="search-form">
+          <input type="text" placeholder="search for city" required class="search-input" />
+          <input type="submit" value="Search" class="search-button" />
         </form>
       </header>
       <main>
         <h2>New York</h2>
         <span>Monday 19:38</span>
-        <p>⛅32°C</p>
-        <span>Clear</span>
+        <div class="temperature-container">
+        <div>⛅32°C</div>
+        Clear
+      <br>
+      </div>
         <div>
-          <p>Humidity 85%</p>
+          Humidity 
+          <br/>85%
         </div>
         <div>
-          <p>Wind 5.14km/h</p>
+          <p>Wind 
+            <br/>5.14km/h</p>
         </div>
       </main>
       <footer>
