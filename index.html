@@ -16,28 +16,84 @@
   <body>
       <header>
         <h1>Weather Status</h1>
-        <form class="search-form">
-          <input type="text" placeholder="search for city" required class="search-input" />
+        <form>
+          <input type="text" placeholder="search for city" class="search-input" />
           <input type="submit" value="Search" class="search-button" />
         </form>
       </header>
       <main>
-        <div>
-        <h2>New York</h2>
-        <span>Monday 19:38</span>
-        <div class="temperature-container">
-        <div>⛅32°C</div>
-        Clear
-      <br>
-      </div>
-        <div class="humid">
-          Humidity 
-          <br/>85%
+        <div class="weather">
+          <img src="images/rain.png" class="weather-icon">
         </div>
-        <div class="wind-speed">
-          <p>Wind 
-            <br/>5.14km/h</p>
+        <h2 class="temperature">28°C</h2>
+        <h3 class="city">Kampala</h3>
+        <div class="temperature-details">
+          <div class="col">
+            <img src="images/humidity.png">
+          </div>
+          <p class="humidity">93%</p>
+          <p>Humidity</p>
+          <div class="col">
+            <img src="images/windspeed.png">
+          </div>
+          <p class="wind-speed"> 8.75km/h</p>
+          <p>wind Speed</p>
+    
         </div>
+      </main>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/GloriaWex" target="_blank"
+          >Gloria Wechselberger</a
+        >
+        is
+        <a href="https://github.com/GloriaWex/My-Weather-App" target="_blank"
+          >open sourced on GitHub</a
+        >
+        and hosted on
+        <a href="https://kliima.netlify.app/" target="_blank">Netlify</a>
+      </footer>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klima App</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mate&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+<div class="klima-app">
+  <body>
+      <header>
+        <h1>Weather Status</h1>
+        <form>
+          <input type="text" placeholder="search for city" class="search-input" />
+          <input type="submit" value="Search" class="search-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather">
+          <img src="images/rain.png" class="weather-icon">
+        </div>
+        <h2 class="temperature">28°C</h2>
+        <h3 class="city">Kampala</h3>
+        <div class="temperature-details">
+          <div class="col">
+            <img src="images/humidity.png">
+          </div>
+          <p class="humidity">93%</p>
+          <p>Humidity</p>
+          <div class="col">
+            <img src="images/windspeed.png">
+          </div>
+          <p class="wind-speed"> 8.75km/h</p>
+          <p>wind Speed</p>
+    
         </div>
       </main>
       <footer>
