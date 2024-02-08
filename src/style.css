@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 body {
   font-family: "Mate", serif;
   background-color: #085a78;
@@ -6,7 +11,22 @@ body {
 
 h1 {
   text-align: center;
+  margin-bottom: 10px;
 }
+footer {
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid rgba(23, 110, 130, 0.277);
+  padding: 10px;
+}
+.temperature {
+  font-size: 80px;
+  font-weight: 500;
+  margin-bottom: -10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
 .klima-app {
   background-color: #72a8ce;
   border-radius: 10px;
@@ -44,21 +64,31 @@ h1 {
 }
 .weather-icon {
   width: 170px;
-  margin-top: 20px;
-  margin-bottom: -10px;
+  margin-top: 30px;
 }
-
 .temperature {
   font-size: 80px;
   font-weight: 500;
-  margin-bottom: -10px;
-  margin-top: 20px;
-  text-align: center;
 }
+.city {
+  font-size: 45px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: -10px;
+}
+.temperature-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+
 .col {
   display: flex;
   align-items: center;
   text-align: left;
+  margin-bottom: 15px;
 }
 
 .col img {
@@ -70,26 +100,4 @@ h1 {
 .wind-speed {
   font-size: 28px;
   margin-top: -6px;
-}
-
-.city {
-  font-size: 45px;
-  font-weight: 400;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.temperature-details {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  margin-bottom: 50px;
-}
-
-footer {
-  text-align: center;
-  font-size: 14px;
-  border-top: 1px solid rgba(23, 110, 130, 0.277);
-  padding: 10px;
 }
