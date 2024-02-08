@@ -16,21 +16,26 @@
     <body>
       <header>
         <h1>Weather Status</h1>
-        <form>
+        <form class="search-form" id="search-form">
           <input
             type="text"
             placeholder="search for city"
+            required
             class="search-input"
+            id="search-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
       </header>
       <main>
         <div class="weather">
+          <div>
+            <p class="weather-app-details">Thursday 16:27, light rain</p>
+          </div>
           <img src="images/rain.png" class="weather-icon" />
         </div>
         <h2 class="temperature">28°c</h2>
-        <h3 class="city">Kampala</h3>
+        <h3 class="city" id="city">Kampala</h3>
         <div class="temperature-details">
           <div class="col">
             <img src="images/humidity.png" />
@@ -62,5 +67,6 @@
         <a href="https://kliima.netlify.app/" target="_blank">Netlify</a>
       </footer>
     </body>
+    <script src="src/index.js"></script>
   </div>
 </html>

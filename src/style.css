@@ -42,6 +42,13 @@ footer {
   border-top: 1px solid rgba(23, 110, 130, 0.277);
   margin-top: 10px;
 }
+.weather-app-details {
+  font-size: 16px;
+  margin: 10px auto;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: left;
+}
 
 .search-input {
   background-color: #dbf1ff;
