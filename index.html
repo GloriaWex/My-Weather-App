@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Mate&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <div class="klima-app">
     <body>
@@ -35,8 +35,9 @@
           </div>
           <img src="images/rain.png" class="weather-icon" />
         </div>
-        <h2 class="temperature">28°c</h2>
-        <h3 class="city" id="city">Kampala</h3>
+        <h2 class="temperature" id="temperature"></h2>
+
+        <h3 class="city" id="city"></h3>
         <div class="temperature-details">
           <div class="col">
             <img src="images/humidity.png" />
