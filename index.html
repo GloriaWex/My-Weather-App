@@ -31,7 +31,9 @@
       <main>
         <div class="weather">
           <div>
-            <p class="weather-app-details">Thursday 16:27, light rain</p>
+            <p class="weather-app-details">
+              <span id="time"></span>, <span id="weather-condition"></span>
+            </p>
           </div>
           <img src="images/rain.png" class="weather-icon" />
         </div>
@@ -42,7 +44,7 @@
           <div class="col">
             <img src="images/humidity.png" />
             <div>
-              <p class="humidity">93%</p>
+              <p class="humidity" id="humidity"></p>
               <p>Humidity</p>
             </div>
           </div>
@@ -50,7 +52,7 @@
           <div class="col">
             <img src="images/windspeed.png" />
             <div>
-              <p class="wind-speed">93%</p>
+              <p class="wind-speed" id="wind-speed"></p>
               <p>Wind Speed</p>
             </div>
           </div>
