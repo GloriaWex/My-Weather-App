@@ -18,6 +18,9 @@ footer {
   border-top: 1px solid rgba(23, 110, 130, 0.277);
   padding: 10px;
 }
+a {
+  color: hsl(256, 88%, 25%);
+}
 .temperature {
   font-size: 80px;
   font-weight: 500;
@@ -106,4 +109,23 @@ footer {
 .wind-speed {
   font-size: 28px;
   margin-top: -6px;
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  color: #000;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
