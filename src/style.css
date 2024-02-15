@@ -122,6 +122,9 @@ a {
   color: #000;
   opacity: 0.5;
 }
+.weather-icon {
+  width: 100%;
+}
 
 .weather-forecast-temperatures-min {
   opacity: 0.5;

@@ -8,6 +8,7 @@ function refreshWeather(response) {
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon"/>`;
 
   cityElement.innerHTML = response.data.city;
   conditionElement.innerHTML = response.data.condition.description;
@@ -15,10 +16,15 @@ function refreshWeather(response) {
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
   temperatureElement.innerHTML = `${Math.round(temperature)}°c`;
   timeElement.innerHTML = formatDate(date);
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon"/>`;
+
   getForecast(response.data.city);
 }
 
+function searchCity(city) {
+  let apiKey = "ae01ceb742e8c6o415tcf3d5baf7b7b5";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(refreshWeather);
+}
 function formatDate(date) {
   let hours = date.getHours();
   let minutes = date.getMinutes();
@@ -51,29 +57,32 @@ function handleSearchSubmit(event) {
 
   searchCity(searchInput.value);
 }
-
 function getForecast(city) {
   let apiKey = "ae01ceb742e8c6o415tcf3d5baf7b7b5";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query={city}&key={apiKey}&units=metrics`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios(apiUrl).then(displayForecast);
 }
 function displayForecast(response) {
   console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Tue", "Wed", "Thur", "Fri", "Sat"];
-  let forecastHtml = "";
-  days.forEach(function (day) {
+
+  let forecasttHtml = "";
+  response.data.daily.forEach(function (day) {
     forecastHtml =
       forecastHtml +
       `
   <div class="weather-forecast-day">
-    <div class="weather-forecast-date">${day}</div>
-    <div class="weather-forecast-icon">🌤️</div>
+    <div class="weather-forecast-date">Tue</div>
+    <div>
+    <img src = "${day.condition.icon_url}"  class="weather-forecast-icon"/>
+    </div>
     <div class="weather-forecast-temperatures">
       <div class="weather-forecast-temperature">
-        <strong>15°</strong>
+        <strong>${Math.round(day.temperature.maximum)}°</strong>
       </div>
-      <div class="weather-forecast-temperature">9°</div>
+      <div class="weather-forecast-temperature">${Math.round(
+        day.temperature.minimum
+      )}°</div>
     </div>
   </div>
 `;
@@ -84,4 +93,4 @@ function displayForecast(response) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
-searchCity("Kamoala");
+searchCity("Kampala");
