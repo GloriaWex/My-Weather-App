@@ -110,6 +110,8 @@ a {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+  border-top: 1px solid rgba(23, 110, 130, 0.277);
+  padding: 15px 0 0 0;
 }
 
 .weather-forecast-date {
