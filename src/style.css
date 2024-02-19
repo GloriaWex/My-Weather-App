@@ -112,6 +112,7 @@ a {
   margin-top: 30px;
   border-top: 1px solid rgba(23, 110, 130, 0.277);
   padding: 15px 0 0 0;
+  text-align: center;
 }
 
 .weather-forecast-date {
